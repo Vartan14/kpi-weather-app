@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/weather-card.css">
+    <title>Weather in {{city}}</title>
+</head>
+<body>
+   <div class="weather-card">
+
+        <div class="top">
+            <div>
+                <p class="city">{{city}}</p>
+                <p class="weather-description">{{ mainData.description }}</p>
+            </div>
+            <img alt="weather" class="weather-icon" src="\icons\\{{ mainData.icon }}.png">
+        </div>
+
+        <p>Temperature: {{weatherData.main.temp}}°C</p>
+        <p>Feels like: {{weatherData.main.feels_like}}°C</p>
+        <p>Pressure: {{weatherData.main.pressure}} hPa</p>
+        <p>Humidity: {{weatherData.main.humidity}}%</p>
+        <p>Wind speed: {{weatherData.wind.speed}} м/с</p>
+        <p>Clouds: {{weatherData.clouds.all}}%</p>
+
+        <a href="/weather" class="btn-back">Back to Weather</a>
+    </div>
+</body>
+</html>

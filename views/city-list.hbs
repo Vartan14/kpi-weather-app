@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="\stylesheets\city-list.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="message">Choose the city to see current weather:</div>
+        <ul class="city-list">
+            {{#each cities}}
+                <li><a class="city-btn" href="/weather/{{this}}">{{this}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>
